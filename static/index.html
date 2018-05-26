@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Raspberry audio config n00b</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <script type="text/javascript" src="./scripts/script.js"></script>
+</head>
+
+<body onload="getAudioDevice();">
+    <div class="card text-center">
+        <div class="card-body">
+            <h5 class="card-title">Current audio device</h5>
+            <p class="card-text" id="currentDevice"></p>
+        </div>
+    </div>
+    <div class="card text-center">
+        <div class="card-body">
+            <h5 class="card-title">HDMI audio</h5>
+            <p class="card-text">Use the HDMI Out audio device</p>
+            <p class="btn btn-primary" onclick="setAudioDevice(2);">HDMI Audio</a>
+        </div>
+    </div>
+
+    <div class="card text-center">
+        <div class="card-body">
+            <h5 class="card-title">Headphone jack audio</h5>
+            <p class="card-text">Use the headphone jack audio device.</p>
+            <p class="btn btn-primary" onclick="setAudioDevice(1);">Headphone jack audio</a>
+        </div>
+    </div>
+</body>
+
+</html>
