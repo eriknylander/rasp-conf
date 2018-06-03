@@ -1,6 +1,7 @@
 from bottle import route, run, get, post, request, static_file
 from subprocess import call
 import os
+import sys
 
 @route('<path:path>')
 def server_static(path):
@@ -42,5 +43,9 @@ def checkDeviceNumber(number):
     else:
         return True
 
-
-run(host='192.168.0.19', port=8080, debug=True)
+if len(sys.argv) < 2:
+    host = "localhost"
+else:
+    host = sys.argv[1]
+ 
+run(host=host, port=8080, debug=True)
